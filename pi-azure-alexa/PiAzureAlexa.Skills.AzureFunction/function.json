@@ -1,0 +1,21 @@
+{
+	"bindings": [
+		{
+			"name": "eventHubMessage",
+			"type": "eventHubTrigger",
+			"direction": "in",
+			"path": "[iot-event-hub-name]",
+			"connection": "app-setting-connection-name"
+		},
+		{
+			"name": "factDocument",
+			"type": "documentDB",
+			"databaseName": "piAzureAlexaDb",
+			"collectionName": "factCollection",
+			"createIfNotExists": true,
+			"connection": "app-setting-connection-name",
+			"direction": "out"
+		}
+	],
+	"disabled": false
+}
