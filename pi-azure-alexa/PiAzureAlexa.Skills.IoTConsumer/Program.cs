@@ -10,7 +10,7 @@ namespace PiAzureAlexa.Skills.IoTConsumer
 {
     class Program
     {
-        static string connectionString = "HostName=RCDogz.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=YdQpJyGIOG6dHa+imTohaP/8c9HR2b9S52YTv6kTnKU=";
+        static string connectionString = "[]";
         static string iotHubD2cEndpoint = "messages/events";
         static EventHubClient eventHubClient;
 
