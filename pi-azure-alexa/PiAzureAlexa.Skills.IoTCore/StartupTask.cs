@@ -15,8 +15,8 @@ namespace PiAzureAlexa.Skills.IoTCore
     public sealed class StartupTask : IBackgroundTask
     {
         static DeviceClient deviceClient;
-        static string iotHubUri = "RCDogz.azure-devices.net";
-        static string deviceKey = "dHUKUejhahpaHJfvHi+5tjsS1GrJjmYRqXuevmPuTHY=";
+        static string iotHubUri = "[]";
+        static string deviceKey = "[]";
 
         public async void Run(IBackgroundTaskInstance taskInstance)
         {
