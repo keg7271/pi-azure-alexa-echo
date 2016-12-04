@@ -64,7 +64,6 @@ namespace PiAzureAlexa.Skills.Host.Speechlets
             // Create the Simple card content.
             SimpleCard card = new SimpleCard();
             card.Title = String.Format("Sample - {0}", title);
-            card.Subtitle = String.Format("Sample - Sub Title");
             card.Content = String.Format("Sample - {0}", output);
 
             // Create the plain text output.
