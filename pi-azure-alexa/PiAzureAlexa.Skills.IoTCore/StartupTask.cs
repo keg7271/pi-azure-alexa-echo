@@ -15,8 +15,8 @@ namespace PiAzureAlexa.Skills.IoTCore
     public sealed class StartupTask : IBackgroundTask
     {
         static DeviceClient deviceClient;
-        static string iotHubUri = "[]";
-        static string deviceKey = "[]";
+        static string iotHubUri = "[IoT Hub Uri]";
+        static string deviceKey = "[Device Key]";
 
         public async void Run(IBackgroundTaskInstance taskInstance)
         {
@@ -38,27 +38,26 @@ namespace PiAzureAlexa.Skills.IoTCore
 
         private static async Task SendDeviceToCloudMessagesAsync()
         {
-            int diceRole = 7; // m/s
+            int someRandomValue = 7; // m/s
             Random rand = new Random();
 
             while (true)
             {
-                diceRole = rand.Next(2, 12);
+                someRandomValue = rand.Next(2, 12); // Generate a number or pull a value from a sensor.
 
                 var telemetryDataPoint = new
                 {
-                    deviceId = "RCDogzPi1",
-                    diceRole = diceRole,
-                    dateTime = DateTime.UtcNow
+                    deviceId = "DeviceId1",         // This is unique to your collection of devices.
+                    someValue = someRandomValue,    // This would be the sensor value, temp, humidity, etc.
+                    dateTime = DateTime.UtcNow      // This is the moment the sensor reading was taken.
                 };
 
                 var messageString = JsonConvert.SerializeObject(telemetryDataPoint);
                 var message = new Message(Encoding.ASCII.GetBytes(messageString));
 
                 await deviceClient.SendEventAsync(message);
-                //Console.WriteLine("{0} > Sending message: {1}", DateTime.Now, messageString);
 
-                Task.Delay(60000).Wait();
+                Task.Delay(900000).Wait();  // 900000 ms = 15 min
             }
         }
 

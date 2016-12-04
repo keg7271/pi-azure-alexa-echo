@@ -10,7 +10,7 @@ namespace PiAzureAlexa.Skills.IoTConsumer
 {
     class Program
     {
-        static string connectionString = "[]";
+        static string connectionString = "[event hub version from IoT hub]";
         static string iotHubD2cEndpoint = "messages/events";
         static EventHubClient eventHubClient;
 
