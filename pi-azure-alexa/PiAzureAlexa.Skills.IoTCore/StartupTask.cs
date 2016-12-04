@@ -47,9 +47,9 @@ namespace PiAzureAlexa.Skills.IoTCore
 
                 var telemetryDataPoint = new
                 {
-                    deviceId = "DeviceId1",         // This is unique to your collection of devices.
+                    deviceId = "Device1",         // This is unique to your collection of devices in your IoT hub.
                     someValue = someRandomValue,    // This would be the sensor value, temp, humidity, etc.
-                    dateTime = DateTime.UtcNow      // This is the moment the sensor reading was taken.
+                    timeStamp = DateTime.UtcNow      // This is the moment the sensor reading was taken.
                 };
 
                 var messageString = JsonConvert.SerializeObject(telemetryDataPoint);

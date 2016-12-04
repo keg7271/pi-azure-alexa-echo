@@ -13,7 +13,7 @@ namespace PiAzureAlexa.Skills.Host.Controllers
     {
         [Route("alexa/pi-azure-alexa")]
         [HttpPost]
-        public HttpResponseMessage ZoeSample()
+        public HttpResponseMessage Post()
         {
             var speechlet = new PiAzureAlexaSpeechlet();
             return speechlet.GetResponse(Request);

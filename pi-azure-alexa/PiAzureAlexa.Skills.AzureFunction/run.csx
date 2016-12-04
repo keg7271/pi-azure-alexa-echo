@@ -12,10 +12,10 @@ public static void Run(string eventHubMessage, out object factDocument, TraceWri
 
     factDocument = new
     {
-        id = "Fact-1",
+        id = "MyNumber-1",
         DeviceId = hubMessage.deviceId,
-        DiceRole = hubMessage.diceRole,
-        DateTime = hubMessage.dateTime
+        SomeValue = hubMessage.someValue,
+        TimeStamp = hubMessage.timeStamp
     };
 
     log.Verbose($"Exiting ProcessIoTHub");

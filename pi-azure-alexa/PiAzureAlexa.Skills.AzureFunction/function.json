@@ -5,15 +5,15 @@
 			"type": "eventHubTrigger",
 			"direction": "in",
 			"path": "[iot-event-hub-name]",
-			"connection": "app-setting-connection-name"
+			"connection": "[app-setting-connection-name]"
 		},
 		{
 			"name": "factDocument",
 			"type": "documentDB",
-			"databaseName": "piAzureAlexaDb",
-			"collectionName": "factCollection",
+			"databaseName": "[your-documentdb-db-name]",
+			"collectionName": "[your-documentdb-collection-name]",
 			"createIfNotExists": true,
-			"connection": "app-setting-connection-name",
+			"connection": "[app-setting-connection-name]",
 			"direction": "out"
 		}
 	],
