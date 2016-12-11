@@ -1,8 +1,8 @@
 ﻿{
 	"intents": [
-					{
-																					"intent": "GetNumberIntent",
-																					"slots": []
-					}
+		{
+			"intent": "GetNumberIntent",
+			"slots": []
+		}
 	]
 }
